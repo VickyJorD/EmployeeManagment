@@ -6,6 +6,10 @@ import FooterComponent from './Component/FooterComponent';
 import AddEmployeeXomponent from './Component/AddEmployeeXomponent';
 import ListEmployeeComponent from './Component/ListEmployeeComponent';
 
+import EmployeeDashboard from './Component/EmployeeDashboard';
+import AdminLogin from './Component/AdminLogin';
+import ListAdmin from './Component/ListAdmin';
+
 
 function App() {
   return (
@@ -19,6 +23,11 @@ function App() {
         <Route path='/employee' element={<ListEmployeeComponent/>}/>
         <Route path='/add-employee' element={<AddEmployeeXomponent/>}/>
         <Route path='/add-employee/:id' element={<AddEmployeeXomponent/>}/>
+       
+        <Route path='/EmployeeDashboard' element={<EmployeeDashboard/>}/>
+        <Route path='/AdminLogin' element={<AdminLogin/>}/>
+        <Route path='/ListAdmin' element={<ListAdmin/>}/>
+
 
 
 

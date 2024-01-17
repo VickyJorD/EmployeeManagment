@@ -1,9 +1,27 @@
+// EmployeeDashboard.js
+
+
+import { Container, Row, Col, Card,  } from 'react-bootstrap';
+
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import EmployeeServices from '../Service/EmployeeServices';
+import {
+    CDBSidebar,
+    CDBSidebarContent,
+    CDBSidebarFooter,
+    CDBSidebarHeader,
+    CDBSidebarMenu,
+    CDBSidebarMenuItem,
+  } from 'cdbreact';
+  import { NavLink } from 'react-router-dom';
 
-const ListEmployeeComponent = () => {
-  const [employeeArray, setEmployeeArray] = useState([]);
+
+
+const EmployeeDashboard = () => {
+
+
+    const [employeeArray, setEmployeeArray] = useState([]);
 
   useEffect(() => {
     getAllEmployee();
@@ -49,8 +67,67 @@ const ListEmployeeComponent = () => {
       });
   };
 
+
   return (
-    <div className="container">
+
+
+
+    
+    <div className="d-flex" style={{ marginLeft: '-75px' }}>
+     
+     <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial' }}>
+      <CDBSidebar textColor="#fff" backgroundColor="#333">
+        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
+          <a href="/" className="text-decoration-none" style={{ color: 'inherit' }}>
+            Sidebar
+          </a>
+        </CDBSidebarHeader>
+
+        <CDBSidebarContent className="sidebar-content">
+          <CDBSidebarMenu>
+            <NavLink exact to="/" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/tables" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="table">Manage Employee</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/profile" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/add-employee" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="chart-line">Logout</CDBSidebarMenuItem>
+            </NavLink>
+
+        
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
+
+        <CDBSidebarFooter style={{ textAlign: 'center' }}>
+          <div
+            style={{
+              padding: '20px 5px',
+            }}
+          >
+            Sidebar Footer
+          </div>
+        </CDBSidebarFooter>
+      </CDBSidebar>
+    </div>
+
+
+
+
+
+      <Container fluid className="p-4">
+        <Row>
+          <Col>
+            <Card>
+              <Card.Body>
+                <h2 className='text-center'>Welcome to the Employee Dashboard</h2>
+                <div className="container">
+
+
+               
       
       <h2 className="text-center mb-4">List Employee</h2>
       <table className="table table-bordered table-striped">
@@ -85,7 +162,13 @@ const ListEmployeeComponent = () => {
         </tbody>
       </table>
     </div>
+              </Card.Body>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 
-export default ListEmployeeComponent;
+export default EmployeeDashboard;

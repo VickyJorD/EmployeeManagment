@@ -4,6 +4,7 @@ const FooterComponent = () => {
   return (
     <div>
       <footer className='footer'>
+        
         <span>
             All Reserved &copy; {new Date().getFullYear()}
         </span>

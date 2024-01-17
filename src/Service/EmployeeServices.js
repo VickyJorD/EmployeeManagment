@@ -9,11 +9,14 @@ class EmployeeServices {
   saveEmployee(employeeData){
     return axios.post(BASE_URL,employeeData);
   }
-  updateEmployee(id,employeeData){
-    return axios.put(`${BASE_URL}/${id}`,employeeData)
+  updateEmployee(employeeId, employeeData) {
+    return axios.put(`${BASE_URL}/${employeeId}`, employeeData);
   }
   getEmployeeById(id){
     return axios.get(`${BASE_URL}/${id}`);
+  }
+  deleteEmployee(employeeId) {
+    return axios.delete(`${BASE_URL}/${employeeId}`);
   }
 }
 
