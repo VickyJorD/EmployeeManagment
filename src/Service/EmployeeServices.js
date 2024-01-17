@@ -6,13 +6,13 @@ class EmployeeServices {
   getAllEmployee() {
     return axios.get(BASE_URL);
   }
-  saveEmployee(employeeData){
-    return axios.post(BASE_URL,employeeData);
+  saveEmployee(employeeData) {
+    return axios.post(BASE_URL, employeeData);
   }
   updateEmployee(employeeId, employeeData) {
     return axios.put(`${BASE_URL}/${employeeId}`, employeeData);
   }
-  getEmployeeById(id){
+  getEmployeeById(id) {
     return axios.get(`${BASE_URL}/${id}`);
   }
   deleteEmployee(employeeId) {
@@ -20,4 +20,6 @@ class EmployeeServices {
   }
 }
 
-export default new EmployeeServices();
+const employeeServicesInstance = new EmployeeServices();
+
+export default employeeServicesInstance;

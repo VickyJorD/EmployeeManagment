@@ -70,7 +70,7 @@ const ListAdmin = () => {
               <td>{admin.id}</td>
               <td>{admin.username}</td>
               <td>
-                <Link to={`/update-admin/${admin.id}`} className="btn btn-info">
+                <Link to={`/update-admin/${admin.id}`} onClick={() => handleUpdate(admin.id)} className="btn btn-info">
                   Update
                 </Link>{' '}
                 <button
