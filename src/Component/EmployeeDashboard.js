@@ -94,6 +94,12 @@ const EmployeeDashboard = () => {
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="user">Profile page</CDBSidebarMenuItem>
             </NavLink>
+            <NavLink exact to="/LeaveApplication" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Leave Application</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/Document" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="user">Document</CDBSidebarMenuItem>
+            </NavLink>
             <NavLink exact to="/add-employee" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="chart-line">Logout</CDBSidebarMenuItem>
             </NavLink>

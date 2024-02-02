@@ -9,7 +9,10 @@ import ListEmployeeComponent from './Component/ListEmployeeComponent';
 import EmployeeDashboard from './Component/EmployeeDashboard';
 import AdminLogin from './Component/AdminLogin';
 import ListAdmin from './Component/ListAdmin';
-
+import Document from './Component/Document';
+import LeaveApplication from './Component/LeaveApplication';
+import ListLeave from './Component/ListLeave';
+import Home from './Component/Home';
 
 function App() {
   return (
@@ -27,6 +30,11 @@ function App() {
         <Route path='/EmployeeDashboard' element={<EmployeeDashboard/>}/>
         <Route path='/AdminLogin' element={<AdminLogin/>}/>
         <Route path='/ListAdmin' element={<ListAdmin/>}/>
+        <Route path='/Document' element={<Document/>}/>
+        <Route path='/LeaveApplication' element={<LeaveApplication/>}/>
+        <Route path='/ListLeave' element={<ListLeave/>}/>
+        <Route path='/Home' element={<Home/>}/>
+
 
 
 

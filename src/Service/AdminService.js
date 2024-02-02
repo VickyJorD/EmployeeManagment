@@ -15,6 +15,9 @@ class AdminService {
   getAdminById(id) {
     return axios.get(`${BASE_URL}/${id}`);
   }
+  deleteAdmin(adminId) {
+    return axios.delete(`${BASE_URL}/${adminId}`);
+  }
 }
 
 const adminServiceInstance = new AdminService();

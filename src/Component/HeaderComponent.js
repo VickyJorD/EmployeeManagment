@@ -7,19 +7,31 @@ const HeaderComponent = () => {
       <header>
         <nav className='navbar navbar-expand-md navbar-dark bg-dark p-3'>
           <div>
-            {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-            <a className='navbar-brand m-5' href=''>
+            <Link to="/Home" className='navbar-brand m-5' >
               Employee Management
-            </a>
+            </Link>
           </div>
-          <div className='ml-auto'>
-            <Link to="/add-employee" className='navbar-brand m-5'>
-              Login Employee
-            </Link>
+          <button
+            className='navbar-toggler'
+            type='button'
+            data-toggle='collapse'
+            data-target='#navbarNav'
+            aria-controls='navbarNav'
+            aria-expanded='false'
+            aria-label='Toggle navigation'
+          >
+            <span className='navbar-toggler-icon'></span>
+          </button>
+          <div className='collapse navbar-collapse' id='navbarNav'>
+            <div className='ml-auto'>
+              <Link to="/add-employee" className='navbar-brand m-2'>
+                Login Employee
+              </Link>
 
-            <Link to="/AdminLogin" className='navbar-brand m-5'>
-              Login Admin
-            </Link>
+              <Link to="/AdminLogin" className='navbar-brand m-2'>
+                Login Admin
+              </Link>
+            </div>
           </div>
         </nav>
       </header>
